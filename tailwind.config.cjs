@@ -1,9 +1,10 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "media",
   theme: {
     extend: {
       boxShadow: {
-        "2xl": "-15px 11px 5px -6px rgba(0,0,0,0.2);",
+        "2xl": "-15px 11px 5px -6px rgba(230,250,248,1);",
       },
       colors: {
         blue: {
@@ -26,6 +27,7 @@ module.exports = {
         },
 
         gray: {
+          500: "#23232369",
           400: "#2A2B34",
           300: "#65677B",
           200: "#E4E4E4",
@@ -36,7 +38,10 @@ module.exports = {
       },
 
       fontFamily: {
-        "sans-serif": ["SF Pro Display", "sans-serif"],
+        sf: ["SF Pro Display", "sans-serif"],
+      },
+      maxWidth: {
+        "8xl": "90rem", // 1440px (novo tamanho)
       },
     },
   },
