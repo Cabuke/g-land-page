@@ -28,16 +28,8 @@ const Card: React.FC<CardDetails> = ({
 
   return (
     <>
-      {/* <section
-        className={`dark:bg-[#000000] dark:border-[#282828] card-details border border-[#D2E6E7] w-[328px]  h-[328px] max-md:w-auto  cursor-pointer flex flex-col p-5 rounded-2xl bg-slate-50 hover:bg-slate-400 dark:hover:bg-[#7D7BEB]
-      ${expanded ? "absolute w-auto z-10" : "relative h-[328px] flex-grow"}
-      transition-all duration-500 ease-in-out transform ${
-        expanded ? "scale-105" : "scale-100"
-      }`}
-        onClick={toggleExpand}
-      > */}
       <section
-        className={`dark:bg-[#000000] dark:border-[#282828] card-details border border-[#D2E6E7] w-[328px] h-[328px] max-md:w-auto cursor-pointer flex flex-col p-5 rounded-2xl bg-slate-50 hover:bg-slate-400 dark:hover:bg-[#7D7BEB]
+        className={`dark:bg-[#000000] dark:border-[#282828] card-details border border-[#D2E6E7] flex-1 basis-1/3 xl:w-[328px] h-[328px] w-auto cursor-pointer flex flex-col p-5 rounded-2xl bg-slate-50 hover:bg-slate-400 dark:hover:bg-[#7D7BEB]
       ${
         expanded
           ? "relative sm:absolute w-full sm:w-auto sm:z-10"
@@ -78,8 +70,12 @@ const Card: React.FC<CardDetails> = ({
           </span>
 
           {/* Condição para telas menores */}
-          <span className="flex md:hidden items-center justify-center bg-slate-200 rounded-full border p-1  text-center">
-            {expanded ? <ArrowUp size={16} /> : <ArrowDown size={16} />}
+          <span className="flex md:hidden items-center justify-center bg-slate-200 rounded-full border p-1 text-center dark:bg-gray-900 dark:border-[#4745CA]">
+            {expanded ? (
+              <ArrowUp size={16} className="dark:text-[#FAFAFA]" />
+            ) : (
+              <ArrowDown size={16} className="dark:text-[#FAFAFA]" />
+            )}
           </span>
         </span>
       </section>

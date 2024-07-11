@@ -11,18 +11,18 @@ import ATimg from "./assets/images/giulia_mendonca_psi_brasilia_df_ATM.jpeg";
 import { useMediaQuery } from "react-responsive";
 
 function App() {
-  const isSmallScreen = useMediaQuery({ query: "(max-width: 640px)" });
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 768px)" });
   return (
     <>
-      <section className="background bg-[#FAFAFA] dark:bg-gray-900 min-h-screen">
-        <header className="flex flex-col   mx-5">
+      <section className="background bg-[#FAFAFA] dark:bg-gray-900 min-h-screen pb-2">
+        <header className="flex flex-col   max-sm:mx-5 sm:mx-5 lg:mx-32 xl:mx-40 mx-40">
           <nav className="h-[91px] mb-6 grid items-center">
             <Navbar />
           </nav>
 
           <section className="lg:flex lg:items-center lg:justify-between lg:space-x-0">
-            <div className="max-sm:items-center max-sm:text-start max-sm:flex">
-              <section className=" lg:mb-4  max-sm:text-center">
+            <div className="lg:items-center lg:text-start lg:flex">
+              <section className=" lg:mb-4  max-lg:text-center">
                 <h1 className="dark:text-gray-200 font-sf text-3xl lg:text-5xl font-bold max-sm:leading-10 mb-4 leading-[80px] lg:mb-8">
                   Psicoterapia individual para adultos.
                 </h1>
@@ -62,9 +62,9 @@ function App() {
         </header>
 
         <section className="bg-[#E5F9F7]/80 dark:bg-[#010A16] lg:rounded-tl-[22%] max-sm:rounded-tl-[10%] rounded-tl-[13%] w-full h-full mt-24">
-          <div className="mx-5">
+          <div className="max-sm:mx-5 sm:mx-5 lg:mx-32 xl:mx-40 mx-40">
             <section className="flex flex-col  items-center pt-24">
-              <div className="flex lg:flex-col max-sm:flex-col lg:flex-wrap justify-center gap-[30px] lg:max-w-7xl m-auto">
+              <div className="flex max-sm:flex-col justify-center gap-[30px]">
                 <Card
                   iconBgcolor={"#FFDED4"}
                   image={PsyMental}
@@ -90,13 +90,17 @@ function App() {
                 />
               </div>
             </section>
-            <section className="flex pt-24 pb-24 m-auto p-1 gap-10 ml-5 mr-5 max-sm:flex-col">
-              <section className="flex flex-col justify-center text-start">
-                <h2 className="dark:text-[#FAFAFA] font-sf mb-10 text-2xl max-lg:text-3xl text-center">
+            <section className="flex pt-24 pb-24 m-auto p-1 gap-10 max-sm:flex-col">
+              <section className="flex flex-col justify-center text-start flex-1">
+                <h2 className="dark:text-[#FAFAFA] font-sf mb-10 text-2xl max-lg:text-3xl text-center lg:text-start">
                   Acompanhamento Terapêutico
                 </h2>
-                <section className={`${isSmallScreen ? "" : "hidden"} pb-3`}>
-                  <img className="rounded-lg w-96" src={ATimg} alt="" />
+                <section
+                  className={`${
+                    isSmallScreen ? "" : "hidden"
+                  } pb-3 flex justify-center`}
+                >
+                  <img className="rounded-lg w-96 " src={ATimg} alt="" />
                 </section>
                 <p className="dark:text-[#FAFAFA] font-sf text-lg max-lg:text-lg">
                   O acompanhamento terapêutico é uma prática que dialoga como
@@ -117,9 +121,12 @@ function App() {
           </div>
         </section>
 
-        <section id="bottom" className="flex mt-24 mx-5 gap-10 max-sm:flex-col">
-          <section className="flex flex-col justify-center text-justify ">
-            <h2 className="font-sf text-2xl mb-10 dark:text-gray-200 text-center">
+        <section
+          id="bottom"
+          className="flex mt-24 max-sm:mx-5 sm:mx-5 lg:mx-32 xl:mx-40 mx-40 gap-10 max-sm:flex-col"
+        >
+          <section className="flex flex-col justify-center text-justify flex-1">
+            <h2 className="font-sf text-2xl mb-10 dark:text-gray-200 text-center md:text-start">
               Giulia Mendonça
             </h2>
             <section
@@ -127,7 +134,7 @@ function App() {
                 isSmallScreen ? "" : "hidden"
               } pb-3 justify-center flex`}
             >
-              <img className="rounded-full h-72" src={Avatar2} alt="" />
+              <img className="rounded-full h-80" src={Avatar2} alt="" />
             </section>
             <p className="font-sf text-lg dark:text-gray-200">
               Sou psicóloga clínica, formada há 8 anos e desde então sigo me
@@ -140,7 +147,7 @@ function App() {
             </p>
           </section>
           <section className={`${isSmallScreen ? "hidden" : ""}`}>
-            <img className="" src={Avatar2} alt="" />
+            <img className="rounded-full h-80" src={Avatar2} alt="" />
           </section>
         </section>
       </section>
