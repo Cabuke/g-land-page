@@ -32,7 +32,7 @@ const Card: React.FC<CardDetails> = ({
         className={`dark:bg-[#000000] dark:border-[#282828] card-details border border-[#D2E6E7] flex-1 basis-1/3 xl:w-[328px] h-[328px] w-auto cursor-pointer flex flex-col p-5 rounded-2xl bg-slate-50 hover:bg-slate-400 dark:hover:bg-[#7D7BEB]
       ${
         expanded
-          ? "relative sm:absolute w-full sm:w-auto sm:z-10"
+          ? "relative sm:absolute w-full sm:w-auto sm:z-10  xl:w-auto"
           : "relative h-[328px] flex-grow"
       }
       transition-all duration-500 ease-in-out transform ${
