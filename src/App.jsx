@@ -49,7 +49,6 @@ function App() {
                   className="font-sf bg-[#7D7BEB] text-white dark:text-gray-200  text-lg rounded-lg w-48 h-16  max-sm:w-full"
                   onClick={() => window.open(whatsappLink, "_blank")}
                 >
-                  <SpeedInsights />
                   Entre em contato
                 </button>
                 <Link
@@ -70,6 +69,7 @@ function App() {
         </header>
 
         <section className="bg-[#E5F9F7]/80 dark:bg-[#010A16] lg:rounded-tl-[22%] max-sm:rounded-tl-[10%] rounded-tl-[13%] w-full h-full mt-24">
+          <SpeedInsights />
           <div className="max-sm:mx-5 sm:mx-5 lg:mx-32 xl:mx-40 mx-40">
             <section className="flex flex-col  items-center pt-24">
               <div className="flex max-sm:flex-col justify-center gap-[30px]">
