@@ -12,6 +12,10 @@ const MyCustomHeader = () => {
   const [linkednlState, setLinkednlToggle] = useState(true);
   const [emailState, setEmailToggle] = useState(true);
   const [weight, setWeight] = useState<IconWeight>("fill");
+  const whatsappLink =
+    "https://api.whatsapp.com/send?phone=5561981525162&text=Ol%C3%A1!%0AGostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20psicoterapia.%0APoderia%20me%20fornecer%20mais%20informa%C3%A7%C3%B5es,%20por%20favor%3F";
+  const linkedinLink =
+    "https://www.linkedin.com/in/giulia-mendon%C3%A7a-502621274/";
 
   useEffect(() => {
     const darkModeMediaQuery = window.matchMedia(
@@ -48,6 +52,35 @@ const MyCustomHeader = () => {
     d: emailState ? 1 : 0,
     config: { duration: 1000 },
   });
+
+  const openWhatsApp = () => {
+    setWhatsAppToggle(!whatsAppState);
+    setTimeout(() => {
+      window.open(whatsappLink, "_blank");
+    }, 1000);
+  };
+
+  const openLinkedin = () => {
+    setLinkednlToggle(!linkednlState);
+    setTimeout(() => {
+      window.open(linkedinLink, "_blank");
+    }, 1000);
+  };
+
+  const openEmail = () => {
+    setEmailToggle(!emailState);
+    const email = "gnataliasm@gmail.com";
+    const subject = "Informações sobre psicoterapia";
+    const body =
+      "Olá! Gostaria de saber mais sobre os serviços de psicoterapia.";
+    const emailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+    setTimeout(() => {
+      window.open(emailLink, "_blank");
+    }, 1000);
+  };
+
   return (
     <div className="flex ">
       <animated.div
@@ -64,7 +97,7 @@ const MyCustomHeader = () => {
           color="#76CA6A"
           weight={weight}
           className="cursor-pointer"
-          onClick={() => setWhatsAppToggle(!whatsAppState)}
+          onClick={openWhatsApp}
         />
       </animated.div>
       <span className="mx-10">
@@ -83,7 +116,7 @@ const MyCustomHeader = () => {
             color="#2864AC"
             weight={weight}
             className="cursor-pointer"
-            onClick={() => setLinkednlToggle(!linkednlState)}
+            onClick={openLinkedin}
           />
         </animated.div>
       </span>
@@ -102,7 +135,7 @@ const MyCustomHeader = () => {
           color="#FFC107"
           weight={weight}
           className="cursor-pointer"
-          onClick={() => setEmailToggle(!emailState)}
+          onClick={openEmail}
         />
       </animated.div>
     </div>

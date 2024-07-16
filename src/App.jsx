@@ -12,6 +12,9 @@ import { useMediaQuery } from "react-responsive";
 
 function App() {
   const isSmallScreen = useMediaQuery({ query: "(max-width: 768px)" });
+  const whatsappLink =
+    "https://api.whatsapp.com/send?phone=5561981525162&text=Ol%C3%A1!%0AGostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20de%20psicoterapia.%0APoderia%20me%20fornecer%20mais%20informa%C3%A7%C3%B5es,%20por%20favor%3F";
+
   return (
     <>
       <section className="background bg-[#FAFAFA] dark:bg-gray-900 min-h-screen pb-2">
@@ -41,7 +44,10 @@ function App() {
               </span>
 
               <span className="flex flex-row lg:flex-row lg:justify-center lg: pt-9 justify-center gap-6 max-sm:flex-col max-sm:w-full">
-                <button className="font-sf bg-[#7D7BEB] text-white dark:text-gray-200  text-lg rounded-lg w-48 h-16  max-sm:w-full">
+                <button
+                  className="font-sf bg-[#7D7BEB] text-white dark:text-gray-200  text-lg rounded-lg w-48 h-16  max-sm:w-full"
+                  onClick={() => window.open(whatsappLink, "_blank")}
+                >
                   Entre em contato
                 </button>
                 <Link
