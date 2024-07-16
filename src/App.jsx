@@ -9,6 +9,7 @@ import EspecPsy from "./assets/Icons/espec-psy.svg";
 import PsychoExp from "./assets/Icons/psycho-exp.svg";
 import ATimg from "./assets/images/giulia_mendonca_psi_brasilia_df_ATM.jpeg";
 import { useMediaQuery } from "react-responsive";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   const isSmallScreen = useMediaQuery({ query: "(max-width: 768px)" });
@@ -48,6 +49,7 @@ function App() {
                   className="font-sf bg-[#7D7BEB] text-white dark:text-gray-200  text-lg rounded-lg w-48 h-16  max-sm:w-full"
                   onClick={() => window.open(whatsappLink, "_blank")}
                 >
+                  <SpeedInsights />
                   Entre em contato
                 </button>
                 <Link
