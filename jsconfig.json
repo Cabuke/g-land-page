@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "ESNext",
+      "moduleResolution": "node",
+      "jsx": "react-jsx",
+      "baseUrl": "./",
+      "checkJs": true         // só se você estiver em arquivos .js/.jsx
+    },
+    "include": [
+      "src",
+    "src/@types/custom.d.ts"
+    ]
+  }
+  

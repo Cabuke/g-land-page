@@ -1,26 +1,25 @@
-import React, { useState } from "react";
+import React, { JSX, useState } from "react";
 import {
   ArrowRight,
   ArrowLeft,
   ArrowDown,
   ArrowUp,
 } from "@phosphor-icons/react";
+import { ReactNode } from "react";
 
 interface CardDetails {
-  icon?: JSX.Element;
   title: string;
   description: string;
   expandedDescription: string;
   iconBgcolor: string;
-  image?: string;
+  icon?: ReactNode;
 }
 
 const Card: React.FC<CardDetails> = ({
-  icon,
   title,
   description,
   iconBgcolor,
-  image,
+  icon,
   expandedDescription,
 }) => {
   const [expanded, setExpanded] = useState(false);
@@ -45,7 +44,6 @@ const Card: React.FC<CardDetails> = ({
           style={{ background: iconBgcolor }}
         >
           {icon}
-          <img src={image} width={42} color="#FFF" />
         </span>
 
         <h3 className="dark:text-[#FAFAFA] font-sf pt-2 text-xl">{title}</h3>
