@@ -58,7 +58,7 @@ function App() {
               </section>
               <span className="w-[100%] flex flex-row lg:flex-row lg:justify-start lg: pt-9 justify-center gap-6 max-sm:flex-col max-sm:w-full">
                 <button
-                  className="font-sf bg-[#44241d] text-white text-lg rounded-[15px] w-48 h-16  max-sm:w-full"
+                  className="font-sf bg-[#44241d] text-white text-lg cursor-pointer rounded-[15px] w-48 h-16  max-sm:w-full"
                   onClick={() => window.open(whatsappLink, "_blank")}
                 >
                   Entre em contato
@@ -71,24 +71,34 @@ function App() {
                   offset={0}
                   duration={500}
                 >
-                  <button className="font-sf bg-[#fee6db] text-[#130301] border-[#c78d81] border  rounded-[15px] max-sm:w-full max-sm:h-16 w-48 h-16 lg:mr-4 lg:mb-0 text-lg">
+                  <button className="font-sf bg-[#fee6db] text-[#130301] cursor-pointer border-[#c78d81] border  rounded-[15px] max-sm:w-full max-sm:h-16 w-48 h-16 lg:mr-4 lg:mb-0 text-lg">
                     Saiba mais
                   </button>
                 </Link>
               </span>
             </div>
-            <div className="lg:w-1/2 lg:order-2 flex flex-col items-center relative">
+            <div className="relative inline-block flex-shrink-0">
               {/* Círculo de fundo */}
-              <div className="absolute w-[350px] h-[350px] rounded-full bg-[#D9A8A1] -z-0 top-29 left-[85px]" />
+              <div
+                className="absolute  
+              w-[400px] 
+              h-[400px] 
+              rounded-full 
+              bg-[#D9A8A1]
+              top-[342px] left-[79px]
+              transform
+              -translate-x-[20px] 
+              -translate-y-1/2
+              "
+              />
 
               {/* Imagem da psicóloga */}
-              <span className="relative">
-                <img
-                  src={BackgroundAvatar}
-                  alt="Imagem da psicóloga referente ao site."
-                  className="w-[350px] h-auto mb-4 lg:mb-0"
-                />
-              </span>
+
+              <img
+                className="relative z-10 w-[410px] h-auto object-cover"
+                src={BackgroundAvatar}
+                alt="Imagem da psicóloga referente ao site."
+              />
             </div>
           </section>
         </header>
